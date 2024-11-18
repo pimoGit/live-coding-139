@@ -1,0 +1,51 @@
+/* regole generali di pagina */
+body {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* header */
+header {
+    background-color: #eeeeee;
+    text-align: center;
+    border-bottom: orange solid 1px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+
+/* regole parte principale */
+main {
+    margin: 0 10px;
+}
+
+.titolo_sezione {
+    color: orange;
+    font-size: 24px;
+}
+
+.cont_sezione {
+    margin: 10px 0;
+}
+
+.cont_sezione h3 {
+    font-size: 18px;
+    color: #000;
+    font-style: italic;
+}
+
+.cont_sezione p {
+    font-size: 14px;
+}
+
+
+
+
+/* footer */
+#main_footer {
+    font-size: 10px;
+    border-top: solid 1px orange;
+}
