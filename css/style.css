@@ -6,53 +6,40 @@
 }
 
 body {
-    font-size: 14px;
-    background-image: url(https://ssl.gstatic.com/ui/v1/icons/mail/themes/desk/bg2_1920x1200.jpg);
+    font-size: 34px;
 }
 
-.container {
-    width: 70%;
-    margin: 20px auto;
+a {
+    text-decoration: none;
 }
 
-/* regole header */
-
-/* parte logo */
-#head-logo {
-    border-bottom: solid 2px #fff;
-    padding-bottom: 30px;
+a:hover {
+    color: red;
 }
 
-#head-logo img {
-    width: 100px;
-    line-height: 100%;
-    vertical-align: middle;
+
+span,
+div.starred {
+    text-decoration: overline;
+    color: red;
 }
 
-#head-logo span {
-    color: #fff;
-    font-size: 30px;
+[type] {
+    background-color: red;
 }
 
-/* parte controller */
-#head-controller {
-    border-bottom: solid 2px #fff;
-    padding: 30px 0;
+input:focus {
+    background-color: blue;
 }
 
-#controller {
-    font-size: 30px;
-    color: #fff;
-    margin-top: 20px;
-    line-height: 50px;
+#main-list li {
+    color: red;
 }
 
-.counter {
-    width: 50px;
-    height: 50px;
-    background-color: orange;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 50%;
+#main-list li:first-child {
+    color: green;
+}
+
+.descrizione::after {
+    content: "...";
 }
