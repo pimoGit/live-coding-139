@@ -5,41 +5,36 @@
     box-sizing: border-box;
 }
 
-body {
-    font-size: 34px;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    color: red;
-}
-
-
-span,
-div.starred {
-    text-decoration: overline;
-    color: red;
-}
-
-[type] {
+/* regole header */
+header {
     background-color: red;
+    height: 150px;
 }
 
-input:focus {
-    background-color: blue;
+#logo {
+    font-size: 60px;
 }
 
-#main-list li {
-    color: red;
+#main_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100%;
+
 }
 
-#main-list li:first-child {
-    color: green;
+ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 600px;
+    max-width: 100%;
 }
 
-.descrizione::after {
-    content: "...";
+ul li {
+    list-style: none;
+    /* display: inline-block; */
+    font-size: 25px;
+    /* margin-right: 5px; */
 }
