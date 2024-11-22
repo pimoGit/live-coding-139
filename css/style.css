@@ -7,34 +7,67 @@
 
 /* regole header */
 header {
-    background-color: red;
-    height: 150px;
+    background-color: blueviolet;
+    height: 200px;
+    margin-bottom: 30px;
 }
 
-#logo {
-    font-size: 60px;
-}
+/* regole del blocco centrale */
 
-#main_nav {
+.container {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    height: 100%;
-
+    flex-direction: row;
+    /* gap: 30px; */
+    align-items: flex-start;
+    margin: 0 20px;
+    /* justify-content: space-between; */
 }
 
-ul {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 600px;
-    max-width: 100%;
+#main-nav {
+    font-size: 14px;
+    flex-basis: 30%;
+    flex-shrink: 0;
+    padding: 0 10px;
+    /* DEBUG */
+    background-color: blue;
+    height: 250px;
 }
 
-ul li {
+#main-nav ul {
     list-style: none;
-    /* display: inline-block; */
-    font-size: 25px;
-    /* margin-right: 5px; */
+    margin-bottom: 30px;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+main {
+    flex-grow: 1;
+    padding: 0 10px;
+    /* flex-basis: 70%; */
+    /* DEBUG */
+    background-color: red;
+    height: 450px;
+}
+
+aside {
+    padding: 0 10px;
+    flex-basis: 25%;
+    /* DEBUG */
+    background-color: green;
+    height: 250px;
+}
+
+
+
+
+
+/* regole footer */
+footer {
+    margin-top: 30px;
+    background-color: brown;
+    min-height: 200px;
 }
