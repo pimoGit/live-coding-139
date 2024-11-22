@@ -25,8 +25,8 @@ header {
 
 #main-nav {
     font-size: 14px;
-    flex-basis: 30%;
-    flex-shrink: 0;
+    flex-basis: 25%;
+    /* flex-shrink: 0; */
     padding: 0 10px;
     /* DEBUG */
     background-color: blue;
@@ -45,9 +45,8 @@ header {
 
 
 main {
-    flex-grow: 1;
     padding: 0 10px;
-    /* flex-basis: 70%; */
+    flex-basis: 55%;
     /* DEBUG */
     background-color: red;
     height: 450px;
@@ -55,7 +54,7 @@ main {
 
 aside {
     padding: 0 10px;
-    flex-basis: 25%;
+    flex-basis: 20%;
     /* DEBUG */
     background-color: green;
     height: 250px;
