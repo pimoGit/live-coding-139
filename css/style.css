@@ -17,7 +17,7 @@ header {
 .container {
     display: flex;
     flex-direction: row;
-    /* gap: 30px; */
+    gap: 30px;
     align-items: flex-start;
     margin: 0 20px;
     /* justify-content: space-between; */
@@ -27,7 +27,7 @@ header {
     font-size: 14px;
     flex-basis: 25%;
     /* flex-shrink: 0; */
-    padding: 0 10px;
+    /* padding: 0 10px; */
     /* DEBUG */
     background-color: blue;
     height: 250px;
@@ -45,7 +45,7 @@ header {
 
 
 main {
-    padding: 0 10px;
+    /* padding: 0 10px; */
     flex-basis: 55%;
     /* DEBUG */
     background-color: red;
@@ -53,7 +53,7 @@ main {
 }
 
 aside {
-    padding: 0 10px;
+    /* padding: 0 10px; */
     flex-basis: 20%;
     /* DEBUG */
     background-color: green;
