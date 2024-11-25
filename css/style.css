@@ -52,6 +52,10 @@ main {
     height: 450px;
 }
 
+.secondary_title .fa-twitter {
+    color: #fff;
+}
+
 aside {
     /* padding: 0 10px; */
     flex-basis: 20%;
