@@ -5,72 +5,20 @@
     box-sizing: border-box;
 }
 
-/* regole header */
-header {
-    background-color: blueviolet;
-    height: 200px;
-    margin-bottom: 30px;
-}
-
-/* regole del blocco centrale */
 
 .container {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    align-items: flex-start;
-    margin: 0 20px;
-    /* justify-content: space-between; */
-}
-
-#main-nav {
-    font-size: 14px;
-    flex-basis: 25%;
-    /* flex-shrink: 0; */
-    /* padding: 0 10px; */
-    /* DEBUG */
-    background-color: blue;
-    height: 250px;
-}
-
-#main-nav ul {
-    list-style: none;
-    margin-bottom: 30px;
-}
-
-#main-nav a {
-    text-decoration: none;
-    color: #000;
-}
-
-
-main {
-    /* padding: 0 10px; */
-    flex-basis: 55%;
-    /* DEBUG */
+    width: 500px;
+    height: 400px;
     background-color: red;
-    height: 450px;
+    position: relative;
 }
 
-.secondary_title .fa-twitter {
-    color: #fff;
-}
-
-aside {
-    /* padding: 0 10px; */
-    flex-basis: 20%;
-    /* DEBUG */
+.green {
+    width: 50px;
+    height: 50px;
     background-color: green;
-    height: 250px;
-}
-
-
-
-
-
-/* regole footer */
-footer {
-    margin-top: 30px;
-    background-color: brown;
-    min-height: 200px;
+    position: absolute;
+    bottom: 0;
+    /* right: 0; */
+    left: 100%;
 }
