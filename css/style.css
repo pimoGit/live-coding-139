@@ -5,32 +5,107 @@
     box-sizing: border-box;
 }
 
-/* mobile first */
-
-a {
-    text-decoration: none;
-    color: #000;
+body {
+    background-color: lightgrey;
 }
 
-header ul {
-    padding-left: 100px;
-    padding-top: 50px;
+.col,
+.col_video,
+.col_info {
+    /* DEBUG */
+    height: 150px;
+    background-color: red;
+    border: solid 2px #000;
 }
+
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+
+}
+
+/* header */
+header {
+    height: 100px;
+    background-color: #fff;
+}
+
+
+/* regole contenuto principale */
+.container {
+    width: 80%;
+    margin: 30px auto;
+    /* DEBUG */
+    background-color: blue;
+    /* min-height: 400px; */
+}
+
+
+#banner {
+    display: none;
+}
+
+
+#presentation img {
+    width: 100px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+
+
+/* footer */
+footer {
+    background-color: blueviolet;
+    /* DEBUG */
+    height: 150px;
+}
+
+
+
 
 /* versione tablet */
-@media screen and (min-width:780px) {
+@media screen and (min-width:768px) {
+    #banner {
+        display: block;
+        /* debug */
+        background-color: green;
+        height: 50px;
+    }
 
-    header ul {
+    #presentation img {
+        float: left;
+        margin-right: 10px;
+    }
+
+}
+
+
+/* versione desktop */
+@media screen and (min-width:992px) {
+
+    /* regole genrali */
+    .row {
         display: flex;
-        justify-content: space-evenly;
-        padding-left: 0;
-        list-style: none;
+        justify-content: space-between;
     }
 
-    header ul a {
-        background-color: gray;
-        color: #fff;
-        padding: 10px 20px;
+    /* regole parte main */
+    #info_ricetta .col_video {
+        width: 70%;
     }
 
+    #info_ricetta .col_info {
+        width: 30%;
+    }
+
+
+
+    /* regole footer */
+    footer .col {
+        width: 40%;
+
+    }
 }
