@@ -7,6 +7,7 @@
 
 body {
     background-color: lightgrey;
+    font-size: 20px;
 }
 
 .col,
@@ -18,12 +19,7 @@ body {
     border: solid 2px #000;
 }
 
-.clearfix::after {
-    display: table;
-    content: "";
-    clear: both;
 
-}
 
 /* header */
 header {
@@ -41,6 +37,15 @@ header {
     /* min-height: 400px; */
 }
 
+
+#info_ricetta h2 {
+    /* font-size: 20px; */
+    font-size: 1rem;
+}
+
+.text_plus {
+    display: none;
+}
 
 #banner {
     display: none;
@@ -68,11 +73,29 @@ footer {
 
 /* versione tablet */
 @media screen and (min-width:768px) {
+
+    #info_ricetta h2 {
+        /* font-size: 30px; */
+        font-size: 1.5rem;
+    }
+
+    .text_plus {
+        display: inline;
+    }
+
     #banner {
         display: block;
         /* debug */
         background-color: green;
         height: 50px;
+    }
+
+
+    .clearfix::after {
+        display: table;
+        content: "";
+        clear: both;
+
     }
 
     #presentation img {
@@ -93,6 +116,12 @@ footer {
     }
 
     /* regole parte main */
+    #info_ricetta h2 {
+        /* font-size: 40px; */
+        font-size: 2rem;
+    }
+
+
     #info_ricetta .col_video {
         width: 70%;
     }
