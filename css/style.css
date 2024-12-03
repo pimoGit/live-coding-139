@@ -6,24 +6,56 @@
 }
 
 
-header {
-    background-color: yellow;
-    height: 100px;
-}
-
-
-main {
-    background-color: lightblue;
-    height: calc(100vh - 200px);
-    overflow: auto;
+/* macro blocco principale */
+#wrapper {
+    display: flex;
+    height: calc(100vh - 150px);
     /* DEBUG */
-    /* height: 400px; */
+    background-color: red;
+}
+
+
+/* blocco navigazione principale */
+#wrapper nav {
+    height: 100%;
+    width: 250px;
+    /* DEBUG */
+    background-color: blueviolet;
+}
+
+
+/* blocco di contenuto principale */
+#wrapper main {
+    overflow: auto;
+    height: 100%;
+    width: calc(100% - 250px);
+    /* DEBUG */
+    background-color: green;
+}
+
+
+/* player/controller */
+
+#player {
+    height: 150px;
+    background-color: darkgray;
 }
 
 
 
+/* versione small mmobile */
+@media screen and (max-width:480px) {
 
-footer {
-    background-color: gray;
-    height: 100px;
+    /* blocco navigazione principale */
+    #wrapper nav {
+        width: 80px;
+    }
+
+
+    /* blocco di contenuto principale */
+    #wrapper main {
+        width: calc(100% - 80px);
+    }
+
+
 }
