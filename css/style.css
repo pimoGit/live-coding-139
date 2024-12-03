@@ -5,136 +5,25 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: lightgrey;
-    font-size: 20px;
-}
 
-.col,
-.col_video,
-.col_info {
-    /* DEBUG */
-    height: 150px;
-    background-color: red;
-    border: solid 2px #000;
-}
-
-
-
-/* header */
 header {
+    background-color: yellow;
     height: 100px;
-    background-color: #fff;
 }
 
 
-/* regole contenuto principale */
-.container {
-    width: 80%;
-    margin: 30px auto;
+main {
+    background-color: lightblue;
+    height: calc(100vh - 200px);
+    overflow: auto;
     /* DEBUG */
-    background-color: blue;
-    /* min-height: 400px; */
-}
-
-
-#info_ricetta h2 {
-    /* font-size: 20px; */
-    font-size: 1rem;
-}
-
-.text_plus {
-    display: none;
-}
-
-#banner {
-    display: none;
-}
-
-
-#presentation img {
-    width: 100px;
-    margin-bottom: 10px;
-    display: block;
+    /* height: 400px; */
 }
 
 
 
 
-/* footer */
 footer {
-    background-color: blueviolet;
-    /* DEBUG */
-    height: 150px;
-}
-
-
-
-
-/* versione tablet */
-@media screen and (min-width:768px) {
-
-    #info_ricetta h2 {
-        /* font-size: 30px; */
-        font-size: 1.5rem;
-    }
-
-    .text_plus {
-        display: inline;
-    }
-
-    #banner {
-        display: block;
-        /* debug */
-        background-color: green;
-        height: 50px;
-    }
-
-
-    .clearfix::after {
-        display: table;
-        content: "";
-        clear: both;
-
-    }
-
-    #presentation img {
-        float: left;
-        margin-right: 10px;
-    }
-
-}
-
-
-/* versione desktop */
-@media screen and (min-width:992px) {
-
-    /* regole genrali */
-    .row {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    /* regole parte main */
-    #info_ricetta h2 {
-        /* font-size: 40px; */
-        font-size: 2rem;
-    }
-
-
-    #info_ricetta .col_video {
-        width: 70%;
-    }
-
-    #info_ricetta .col_info {
-        width: 30%;
-    }
-
-
-
-    /* regole footer */
-    footer .col {
-        width: 40%;
-
-    }
+    background-color: gray;
+    height: 100px;
 }
