@@ -1,61 +1,17 @@
-/* regole generali di pagina */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* regole di debug macro */
+
+[class^='container'] {
+    border: 1px dashed black;
+    background-color: lightblue;
+    min-height: 80vh;
 }
 
-
-/* macro blocco principale */
-#wrapper {
-    display: flex;
-    height: calc(100vh - 150px);
-    /* DEBUG */
-    background-color: red;
+[class^='row'] {
+    border: 1px dashed red;
 }
 
-
-/* blocco navigazione principale */
-#wrapper nav {
-    height: 100%;
-    width: 250px;
-    /* DEBUG */
-    background-color: blueviolet;
-}
-
-
-/* blocco di contenuto principale */
-#wrapper main {
-    overflow: auto;
-    height: 100%;
-    width: calc(100% - 250px);
-    /* DEBUG */
-    background-color: green;
-}
-
-
-/* player/controller */
-
-#player {
-    height: 150px;
-    background-color: darkgray;
-}
-
-
-
-/* versione small mmobile */
-@media screen and (max-width:480px) {
-
-    /* blocco navigazione principale */
-    #wrapper nav {
-        width: 80px;
-    }
-
-
-    /* blocco di contenuto principale */
-    #wrapper main {
-        width: calc(100% - 80px);
-    }
-
-
+[class^='col'] {
+    height: 100px;
+    background-color: #f1d2e7;
+    border: 1px solid #d0a8eb;
 }
