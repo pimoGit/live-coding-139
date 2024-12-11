@@ -3,7 +3,7 @@
 [class^='container'] {
     border: 1px dashed black;
     background-color: lightblue;
-    min-height: 80vh;
+    /* min-height: 80vh; */
 }
 
 [class^='row'] {
@@ -14,4 +14,9 @@
     height: 100px;
     background-color: #f1d2e7;
     border: 1px solid #d0a8eb;
+}
+
+/* regole navbar */
+header .nav-link {
+    color: red;
 }
