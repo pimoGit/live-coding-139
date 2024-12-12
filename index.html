@@ -34,7 +34,7 @@
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contatti</a>
+                                <a class="nav-link" href="pagine/new-book.html">Contatti</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Prezzi</a>
@@ -76,7 +76,37 @@
         <!-- riga a 2 con comportamento responsive -->
         <div class="row">
             <div class="col-12 col-md-6 col-lg-10">
-                Column
+                <form action="">
+
+                    <div>
+                        <label for="nome">Nome*</label>
+                        <input type="text" id="nome" placeholder="inserisci il tuo nome" required>
+                    </div>
+
+                    <div>
+                        <label for="mail">Email*</label>
+                        <input type="email" id="mail" placeholder="inserisci la tua email" required>
+                    </div>
+
+                    <div>
+                        <label for="msg">Messaggio</label>
+                        <textarea name="msg" id="msg">
+                        </textarea>
+                    </div>
+
+                    <div>
+                        <label for="privacy">Accetto la Privacy policy</label>
+                        <input type="checkbox" id="privacy">
+                    </div>
+
+                    <div>
+                        <input type="submit" value="INVIA">
+                    </div>
+
+
+
+
+                </form>
             </div>
             <div class="col-12 col-md-6 col-lg-6">
                 Column

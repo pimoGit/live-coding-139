@@ -11,7 +11,7 @@
 }
 
 [class^='col'] {
-    height: 100px;
+    min-height: 100px;
     background-color: #f1d2e7;
     border: 1px solid #d0a8eb;
 }
@@ -19,4 +19,8 @@
 /* regole navbar */
 header .nav-link {
     color: red;
+}
+
+header .nav-link:hover {
+    color: green;
 }
