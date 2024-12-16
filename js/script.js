@@ -9,7 +9,7 @@ let lastName;
 
 
 // assegnare nome e cognome utente
-firstName = "Paola";
+firstName = "Emanuela";
 lastName = "Verdi";
 
 // variabile di nome completo
@@ -24,6 +24,12 @@ let salutoUser2 = `Ciao il mio nome è ${firstName} ${lastName}, e vi saluto tut
 
 console.log(salutoUser2);
 
+// quanti caratteri ci sono nel nome utente
+let lunghezzaUserName = firstName.length;
+
+console.log("la lunghezza in caratteri del nome utente è:", lunghezzaUserName);
+
+
 // prove con i numeri
 let somma = 2 + 5;
 
@@ -37,6 +43,11 @@ let moltiplicazione = somma * sottrazione;
 
 console.log("il valore di moltiplicazione è: ", moltiplicazione);
 
+// valore fissato
+let valorePartenza = 0.12345;
+let valoreFissato = valorePartenza.toFixed(2);
+
+console.log("Esempio di valore fissato a 2 unità", valoreFissato);
 
 
 
