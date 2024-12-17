@@ -1,44 +1,28 @@
-// chiediamo all'utente due parole e gli indichiamo qual'è la più lunga
+// chiediamo all'utente due ètà e gli indichiamo quella più grande
 
-// variabile di messaggio/risultato
+
+// creiamo var di risultato
 let risultato;
 
-// richiesta info all'utente (due parole)
-let parola1 = prompt("inserisci la prima parola");
-let parola2 = prompt("inserisci la seconda parola");
+// chiediamo in input le due età (numeri) all'utente
+let etaUtente1 = parseInt(prompt("inserisci una età (un numero)"));
+let etaUtente2 = parseInt(prompt("inserisci un'altra età (un numero)"));
 
-// variabili di lunghezza stringhe
-let lunghezzaParola1 = parola1.length;
-let lunghezzaParola2 = parola2.length;
+console.log(etaUtente1, etaUtente2);
 
 
-console.log(parola1, parola2);
-
-
-// valutare quale delle due parole è più lunga
-// SE che la parola1 è più lunga
-if (lunghezzaParola1 > lunghezzaParola2) {
-    // setto il risultato su parola1
-    // console.log("la parola 1 è più lunga");
-    risultato = "la parola 1 è più lunga";
-    // SE che  la parola2 è più lunga
-} else if (lunghezzaParola2 > lunghezzaParola1) {
-    // setto il risultato su parola2
-    // console.log("la parola 2 è più lunga");
-    risultato = "la parola 2 è più lunga";
-    // SE le due prole sono lunghe uguali
+// verifichiamo quel'è la più grande
+// SE la prima è più grande
+if (etaUtente1 > etaUtente2) {
+    risultato = "la prima ètà è più grande"
+    // SE la seconda è più grande
+} else if (etaUtente2 > etaUtente1) {
+    risultato = "la seconda ètà è più grande"
+    // SE sono uguali
 } else {
-    // setto il risultato su uguali
-    // console.log("le parole sono lunghe uguali");
-    risultato = "le parole sono lunghe uguali";
+    risultato = "le età sono uguali"
 }
 
 
-console.log("altre cose che verranno fatte");
-
-
-
-// indicare all'utente la parola più lunga
+// diamo l'output/risposta all'utente
 console.log(risultato);
-// alert(risultato);
-
