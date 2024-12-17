@@ -1,28 +1,53 @@
-// chiediamo all'utente due ètà e gli indichiamo quella più grande
+// gioco di pari e dispari
 
 
-// creiamo var di risultato
+// INPUT
+// l'utente scommette sul risultato (pari/dispari)
+let scommessaUser = prompt("scegli se uscirà 'pari' o 'dispari'");
+
+// l'utente inserisce un numero (1-10)
+let numeroUser = parseInt(prompt("inserisci un numero tra 1 e 10"));
+
+// il PC ci restituisce un numero (1-10)
+let numeroPC = Math.floor(Math.random() * 10) + 1;
+
+console.log(scommessaUser, numeroUser, numeroPC);
+
+
+
+// ELABORAZIONE
+// sommo i due numeri
+let somma = numeroUser + numeroPC;
+
+console.log("la somma è: ", somma);
+
+
+// verifico il risultato (salvandomi il dato)
 let risultato;
-
-// chiediamo in input le due età (numeri) all'utente
-let etaUtente1 = parseInt(prompt("inserisci una età (un numero)"));
-let etaUtente2 = parseInt(prompt("inserisci un'altra età (un numero)"));
-
-console.log(etaUtente1, etaUtente2);
-
-
-// verifichiamo quel'è la più grande
-// SE la prima è più grande
-if (etaUtente1 > etaUtente2) {
-    risultato = "la prima ètà è più grande"
-    // SE la seconda è più grande
-} else if (etaUtente2 > etaUtente1) {
-    risultato = "la seconda ètà è più grande"
-    // SE sono uguali
+// SE somma è divisibile per 2 (pari)
+if (somma % 2 === 0) {
+    risultato = "pari";
+    // ALTRIMENTI è dispari
 } else {
-    risultato = "le età sono uguali"
+    risultato = "dispari";
+}
+
+console.log("il risultato è: ", risultato);
+
+
+// verifico chi ha vinto
+// SE scommessa utente corrisponde a segno della somma (risultato)
+if (scommessaUser === risultato) {
+    // ha vinto utente
+    console.log("hai vinto!!");
+    // ALTRIMENTI
+} else {
+    // ha perso l'utente / vince il PC
+    console.log("hai perso, ha vinto il PC...");
+
 }
 
 
-// diamo l'output/risposta all'utente
-console.log(risultato);
+
+// OUTPUT
+// comunichiamo all'utente chi ha vinto
