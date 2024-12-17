@@ -1,55 +1,44 @@
-// dichiarazione variabile 
+// chiediamo all'utente due parole e gli indichiamo qual'è la più lunga
 
-// dichiarazione nome utente
-let firstName;
+// variabile di messaggio/risultato
+let risultato;
 
-// dichiarazione cognome utente
-let lastName;
+// richiesta info all'utente (due parole)
+let parola1 = prompt("inserisci la prima parola");
+let parola2 = prompt("inserisci la seconda parola");
 
-
-
-// assegnare nome e cognome utente
-firstName = "Emanuela";
-lastName = "Verdi";
-
-// variabile di nome completo
-// let nomeCompleto = firstName + " " + lastName;
-
-// console.log(nomeCompleto);
-
-// saluto per l'utente
-let salutoUser = "Ciao il mio nome è " + firstName + " " + lastName + ", e vi saluto tutti";
-
-let salutoUser2 = `Ciao il mio nome è ${firstName} ${lastName}, e vi saluto tutti `;
-
-console.log(salutoUser2);
-
-// quanti caratteri ci sono nel nome utente
-let lunghezzaUserName = firstName.length;
-
-console.log("la lunghezza in caratteri del nome utente è:", lunghezzaUserName);
+// variabili di lunghezza stringhe
+let lunghezzaParola1 = parola1.length;
+let lunghezzaParola2 = parola2.length;
 
 
-// prove con i numeri
-let somma = 2 + 5;
+console.log(parola1, parola2);
 
-console.log("il valore di somma è: ", somma);
 
-let sottrazione = somma - 3;
+// valutare quale delle due parole è più lunga
+// SE che la parola1 è più lunga
+if (lunghezzaParola1 > lunghezzaParola2) {
+    // setto il risultato su parola1
+    // console.log("la parola 1 è più lunga");
+    risultato = "la parola 1 è più lunga";
+    // SE che  la parola2 è più lunga
+} else if (lunghezzaParola2 > lunghezzaParola1) {
+    // setto il risultato su parola2
+    // console.log("la parola 2 è più lunga");
+    risultato = "la parola 2 è più lunga";
+    // SE le due prole sono lunghe uguali
+} else {
+    // setto il risultato su uguali
+    // console.log("le parole sono lunghe uguali");
+    risultato = "le parole sono lunghe uguali";
+}
 
-console.log("il valore di sottrazione è: ", sottrazione);
 
-let moltiplicazione = somma * sottrazione;
-
-console.log("il valore di moltiplicazione è: ", moltiplicazione);
-
-// valore fissato
-let valorePartenza = 0.12345;
-let valoreFissato = valorePartenza.toFixed(2);
-
-console.log("Esempio di valore fissato a 2 unità", valoreFissato);
+console.log("altre cose che verranno fatte");
 
 
 
-
+// indicare all'utente la parola più lunga
+console.log(risultato);
+// alert(risultato);
 
