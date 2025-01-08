@@ -2,11 +2,44 @@
 
 let userWord = prompt("inserisci una parola");
 
-console.log(capitalizzaParola(userWord));
+console.log(capitalizzaTesto(userWord));
+
+
+
 
 
 
 // FUNZIONI
+
+function capitalizzaTesto(testo) {
+    const paroleMaiuscole = [];
+
+    // trasformo la mia stringa in lista di parole
+    const listaParoleTesto = testo.split(' ');
+    console.log(listaParoleTesto);
+
+
+    // ciclo la lista capitalizzando ogni parola
+    for (let i = 0; i < listaParoleTesto.length; i++) {
+        let stringaIesima = listaParoleTesto[i];
+        console.log(stringaIesima);
+
+        // capitalizza parola iesima
+        paroleMaiuscole.push(capitalizzaParola(stringaIesima));
+
+    }
+    console.log(paroleMaiuscole);
+
+
+    // trasformo la mia lista di parole nuovamente in stringa
+    const stringaParoleMaiuscole = paroleMaiuscole.join(' ');
+
+    // ritorno la stringa finale
+    return stringaParoleMaiuscole
+
+}
+
+
 function capitalizzaParola(parola) {
 
     // prendiamo il primo carattere e lo facciamo maiuscolo
