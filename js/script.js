@@ -1,13 +1,30 @@
-// creare una funzione che generi un numero random
+// creare una funzione che dato un numero
+// mi dica se il numero è pari oppure dispari
 
-function generaNumRandomRange(numMax, numMin) {
-    const numeroGenerato = Math.floor(Math.random() * (numMax - numMin + 1)) + numMin;
 
-    return numeroGenerato
+const numeroUser = parseInt(prompt("inserisci un numero"));
+
+console.log(pariODispari(numeroUser));
+
+
+// FUNZIONI
+function pariODispari(numero) {
+    // dichiarazione variabile flag
+    let risultato;
+
+    if (numero % 2 === 0) {
+        risultato = "pari";
+    } else {
+        risultato = "dispari";
+    }
+
+    return risultato
+
+
+
+    // if (numero % 2 === 0) {
+    //     return "pari";
+    // } else {
+    //     return "dispari";
+    // }
 }
-
-
-console.log(generaNumRandomRange(100, 10));
-
-console.log(generaNumRandomRange(20, 5));
-
