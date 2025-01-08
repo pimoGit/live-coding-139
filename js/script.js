@@ -1,27 +1,13 @@
+// creare una funzione che generi un numero random
 
+function generaNumRandomRange(numMax, numMin) {
+    const numeroGenerato = Math.floor(Math.random() * (numMax - numMin + 1)) + numMin;
 
-
-const somma = sommaNumeri(49, 2);
-
-const somma2 = sommaNumeri(12, 22);
-
-
-const sommaSomme = sommaNumeri(somma, somma2)
-
-console.log(somma, somma2, sommaSomme); // 51
-
-console.log(risultato); // "ReferenceError: risultato is not defined
-
-
-
-
-
-
-// FUNCTIONS
-function sommaNumeri(num1, num2) {
-
-    const risultato = num1 + num2;
-
-    return risultato;
-
+    return numeroGenerato
 }
+
+
+console.log(generaNumRandomRange(100, 10));
+
+console.log(generaNumRandomRange(20, 5));
+
