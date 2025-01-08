@@ -1,42 +1,33 @@
-// creaiamo una funzione
-//  che data una parola ci dia la sua versione revertata
+// data una parola stampare la versione con la prima lettera maiuscola
 
-let parola = prompt("inserisci una parola");
+let userWord = prompt("inserisci una parola");
 
-console.log(revertaParola(parola));
+console.log(capitalizzaParola(userWord));
+
 
 
 // FUNZIONI
+function capitalizzaParola(parola) {
 
-function revertaParola(stringa) {
+    // prendiamo il primo carattere e lo facciamo maiuscolo
+    // const primaLettera = parola[0];
+    // console.log(primaLettera);
+    // const upperPrimaLettera = primaLettera.toUpperCase();
+    // console.log(upperPrimaLettera);
 
-    // variabile parola revertata
-    let parolaRevertata = '';
-
-    // cicliamo la stringa dalla fine, all'inizio anadando a prenderci ad ogni iterazione il carattere iesimo
-    for (let i = stringa.length - 1; i >= 0; i--) {
-        // let carattereIesimo = stringa[i];
-        let carattereIesimo = stringa.charAt(i);
-
-        // console.log(carattereIesimo);
-
-        // aggiungiamo alla var di parola revertata il carattere iesimo
-        parolaRevertata = parolaRevertata + carattereIesimo;
-        // parolaRevertata += carattereIesimo;
-
-    }
+    const primaLetteraMaiuscola = parola[0].toUpperCase();
+    // console.log(primaLetteraMaiuscola);
 
 
-    // ritorniamo il valore della parola revertata
-    return parolaRevertata
 
 
-}
+    // prendiamo il resto della parola
+    const restoStringa = parola.substring(1);
+    // console.log(restoStringa);
 
 
-function revertaParola2(stringa) {
+    // concateniamo le due stringhe (la prima lettere + il resto)
+    const parolaCapitalizzata = primaLetteraMaiuscola + restoStringa;
 
-    return stringa.split("").reverse().join("");
-
-
+    return parolaCapitalizzata;
 }
