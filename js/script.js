@@ -1,30 +1,42 @@
-// creare una funzione che dato un numero
-// mi dica se il numero è pari oppure dispari
+// creaiamo una funzione
+//  che data una parola ci dia la sua versione revertata
 
+let parola = prompt("inserisci una parola");
 
-const numeroUser = parseInt(prompt("inserisci un numero"));
-
-console.log(pariODispari(numeroUser));
+console.log(revertaParola(parola));
 
 
 // FUNZIONI
-function pariODispari(numero) {
-    // dichiarazione variabile flag
-    let risultato;
 
-    if (numero % 2 === 0) {
-        risultato = "pari";
-    } else {
-        risultato = "dispari";
+function revertaParola(stringa) {
+
+    // variabile parola revertata
+    let parolaRevertata = '';
+
+    // cicliamo la stringa dalla fine, all'inizio anadando a prenderci ad ogni iterazione il carattere iesimo
+    for (let i = stringa.length - 1; i >= 0; i--) {
+        // let carattereIesimo = stringa[i];
+        let carattereIesimo = stringa.charAt(i);
+
+        // console.log(carattereIesimo);
+
+        // aggiungiamo alla var di parola revertata il carattere iesimo
+        parolaRevertata = parolaRevertata + carattereIesimo;
+        // parolaRevertata += carattereIesimo;
+
     }
 
-    return risultato
+
+    // ritorniamo il valore della parola revertata
+    return parolaRevertata
 
 
+}
 
-    // if (numero % 2 === 0) {
-    //     return "pari";
-    // } else {
-    //     return "dispari";
-    // }
+
+function revertaParola2(stringa) {
+
+    return stringa.split("").reverse().join("");
+
+
 }
