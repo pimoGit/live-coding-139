@@ -1,16 +1,10 @@
+// function sommaNUmeri(num1, num2) {
+//     return num1 + num2;
+// }
 
 
-saluta();
-
-
-const saluta2 = () => console.log("Ciao a nessuno!");
-
-
-saluta2();
-
-
-
-// funzioni
-function saluta() {
-    console.log("Ciao a tutti!");
+const sommaNUmeri = (num1, num2) => {
+    return num1 + num2;
 }
+
+console.log(sommaNUmeri(3, 7));
