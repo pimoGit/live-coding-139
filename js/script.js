@@ -1,10 +1,14 @@
-// function sommaNUmeri(num1, num2) {
-//     return num1 + num2;
+// function isEven(num) {
+//     return num % 2 === 0
 // }
 
 
-const sommaNUmeri = (num1, num2) => {
-    return num1 + num2;
-}
+const isEven = num => num % 2 === 0;
 
-console.log(sommaNUmeri(3, 7));
+
+console.log(isEven(4));
+console.log(isEven(7));
+
+
+
+
