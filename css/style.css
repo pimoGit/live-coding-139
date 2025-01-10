@@ -24,3 +24,7 @@ header .nav-link {
 header .nav-link:hover {
     color: green;
 }
+
+.titolo {
+    color: red;
+}
