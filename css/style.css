@@ -36,3 +36,21 @@ header .nav-link:hover {
 .female {
     color: violet;
 }
+
+
+#bottone {
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.saluto-bg1 {
+    background-color: aqua;
+}
+
+.saluto-bg2 {
+    background-color: burlywood;
+}

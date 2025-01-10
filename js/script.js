@@ -1,34 +1,25 @@
-// Il software deve chiedere all’utente il suo nome e il sesso con due prompt diversi.
-// Sulla pagina html deve apparire “Ciao <nome>”, 
-// il colore del nome deve essere azzurro o rosa a seconda del sesso inserito */
+// selezioni degli elementi
+const button = document.getElementById('bottone');
+
+const divSaluto = document.getElementById('saluto');
 
 
-let sexClass;
+// gestione dell'evento
+button.addEventListener('click', function () {
+    // capisco se la classe associata è quella di partenza
+    const isUno = divSaluto.classList.contains("saluto-bg1");
 
-// selezioniamo l'elemnto di output
-const element = document.getElementById("saluto");
+    // cambiamo colore di BG all'elemento
+    if (isUno) {
+        divSaluto.classList.add("saluto-bg2");
+        divSaluto.classList.remove("saluto-bg1");
+    } else {
+        divSaluto.classList.add("saluto-bg1");
+        divSaluto.classList.remove("saluto-bg2");
+    }
 
-console.log(element);
+
+});
 
 
 
-// chiediamo i dati allo User
-const nomeUser = prompt("inserisci il tuo nome");
-const sesso = prompt("inseisci il tuo sesso, M o F");
-
-console.log(nomeUser, sesso);
-
-// aggiungiamo il nomecome output
-element.innerHTML = `Ciao ${nomeUser}`;
-
-// gestiamo il nome della classe da associare in base al sesso
-if (sesso === "M") {
-    sexClass = "male";
-} else {
-    sexClass = "female"
-}
-
-console.log(sexClass);
-
-// associamo la classe giusta
-element.classList.add(sexClass);
