@@ -28,3 +28,11 @@ header .nav-link:hover {
 .titolo {
     color: red;
 }
+
+.male {
+    color: red;
+}
+
+.female {
+    color: violet;
+}
