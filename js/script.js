@@ -10,13 +10,15 @@ button.addEventListener('click', function () {
     const isUno = divSaluto.classList.contains("saluto-bg1");
 
     // cambiamo colore di BG all'elemento
-    if (isUno) {
-        divSaluto.classList.add("saluto-bg2");
-        divSaluto.classList.remove("saluto-bg1");
-    } else {
-        divSaluto.classList.add("saluto-bg1");
-        divSaluto.classList.remove("saluto-bg2");
-    }
+    // if (isUno) {
+    //     divSaluto.classList.add("saluto-bg2");
+    //     divSaluto.classList.remove("saluto-bg1");
+    // } else {
+    //     divSaluto.classList.add("saluto-bg1");
+    //     divSaluto.classList.remove("saluto-bg2");
+    // }
+
+    divSaluto.classList.toggle("saluto-bg2");
 
 
 });
