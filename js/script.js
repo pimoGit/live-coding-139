@@ -1,27 +1,25 @@
-// selezioni degli elementi
-const button = document.getElementById('bottone');
+// selezioniamo la lista vuota
+const list = document.querySelector(".list");
 
-const divSaluto = document.getElementById('saluto');
-
-
-// gestione dell'evento
-button.addEventListener('click', function () {
-    // capisco se la classe associata è quella di partenza
-    const isUno = divSaluto.classList.contains("saluto-bg1");
-
-    // cambiamo colore di BG all'elemento
-    // if (isUno) {
-    //     divSaluto.classList.add("saluto-bg2");
-    //     divSaluto.classList.remove("saluto-bg1");
-    // } else {
-    //     divSaluto.classList.add("saluto-bg1");
-    //     divSaluto.classList.remove("saluto-bg2");
-    // }
-
-    divSaluto.classList.toggle("saluto-bg2");
+// array di cui fare l'output
+const names = ['Qui', 'Quo', 'Qua', "paperino", "pluto"];
 
 
-});
+// OUTPUT
+
+// inizializzazione della variabile di accumulo
+let items = '';
+
+for (let i = 0; i < names.length; i++) {
+
+    let nomeIesimo = names[i];
+
+    items += `<li>${nomeIesimo}</li>`;
+
+    console.log("all'iterazione numero: ", i, "items corrisposnde a: ", items);
+
+}
 
 
 
+list.innerHTML = items;
