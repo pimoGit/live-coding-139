@@ -1,39 +1,23 @@
-// selezioniamo la lista vuota
-const list = document.querySelector(".list");
+const field = document.getElementById('name');
+const button = document.querySelector('button');
+const outputElement = document.getElementById('outputEl');
 
-// array di cui fare l'output
-const names = ['Qui', 'Quo', 'Qua', "paperino", "pluto"];
+// se proviamo a leggere qui, sarà sempre vuoto
+// const name = field.value; //
 
-
-// OUTPUT
-
-// inizializzazione della variabile di accumulo
-// let items = '';
-
-// for (let i = 0; i < names.length; i++) {
-
-//     let nomeIesimo = names[i];
-
-//     items += `   <div class="classeNome">
-//                 <a href="#">
-//                     ${nomeIesimo}
-//                 </a>
-//             </div>`;
-
-//     console.log("all'iterazione numero: ", i, "items corrisposnde a: ", items);
-
-// }
-
-// // aggiunta reale alla pagina degli elementi
-// list.innerHTML = items;
+// console.log(name);
 
 
+button.addEventListener('click', () => {
+    // recupero il valore inserito dallo user
+    const name = field.value.trim();
+    console.log(name);
 
-// Versione con createElement
-for (let i = 0; i < names.length; i++) {
-    const li = document.createElement('li');
-    const collegamento = document.createElement('a');
-    li.appendChild(collegamento);
-    collegamento.append(names[i]);
-    list.appendChild(li);
-}
+    // ouput 
+    if (name) {
+        outputElement.innerText = name;
+        field.value = "";
+    }
+
+});
+
