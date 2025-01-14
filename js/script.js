@@ -1,31 +1,41 @@
-// selezioniamo l'elemento di output
-const outputEl = document.getElementById('output');
+// slezioniamo tutti gli elementi
+const display = document.getElementById('display');
+const startButton = document.getElementById('start');
+const stopButton = document.getElementById('stop');
 
-// settiamo i secondi di partenza
-let seconds = 10;
+console.log(display, startButton, stopButton);
 
-// settiamo il set interval
-const countDown = setInterval(() => {
-    // se sono alla fine 
-    if (seconds === 0) {
-        // fermo l'esecuzione
-        clearInterval(countDown);
-        // dico buon anno
-        outputEl.innerHTML = "Buon anno!!!";
-    } else {
-        // decrementiamo il valore di seconds
-        seconds = seconds - 1;
-        outputEl.innerHTML = seconds;
+let timer;
+
+// gestione evento di start cronometro
+startButton.addEventListener("click",
+    () => {
+        let count = 0;
+        // avviamo il set interval
+        timer = setInterval(() => {
+            // count = count + 1;
+            // output
+            display.innerHTML = ++count;
+        }, 1000);
+
+        // gestione abilitazione bottoni
+        // startButton.setAttribute("disabled", "");
+        startButton.disabled = true;
+        // stopButton.setAttribute("");
+        stopButton.disabled = false;
     }
-
-}, 1000);
-
-faiQualcosa();
+);
 
 
+// gestione evento di stop cronometro
+stopButton.addEventListener("click",
+    function () {
+        // bloccare il set interval
+        clearInterval(timer);
 
-// FUNZIONI
-function faiQualcosa() {
-    console.log("ho fatto qualcosa");
+        // gestione abilitazione bottoni
+        startButton.disabled = false;
+        stopButton.disabled = true;
 
-}
+    }
+);

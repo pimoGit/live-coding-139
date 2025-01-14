@@ -9,9 +9,9 @@
 
     <link rel="icon" href="favicon.ico" type="image/ico" />
     <!-- Bootstrap -->
-    <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css'
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css'
         integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=='
-        crossorigin='anonymous' /> -->
+        crossorigin='anonymous' />
 
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css" />
@@ -22,9 +22,13 @@
 
 <body>
 
-    <p id="output">
-
-    </p>
+    <div class="vh-100 d-flex flex-column align-items-center justify-content-center">
+        <div id="display" class="h1">-</div>
+        <div class="controls">
+            <button id="start" class="btn btn-success me-2">START</button>
+            <button id="stop" class="btn btn-danger" disabled>STOP</button>
+        </div>
+    </div>
 
 </body>
 
