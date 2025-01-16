@@ -1,60 +1,26 @@
-// array di oggetti
-const classi = [
-    {
-        'nome': 'Classe#1',
-        'numeroStudenti': 10,
-    },
-    {
-        'nome': 'Classe#2',
-        'numeroStudenti': 12,
-    },
-    {
-        'nome': 'Classe#3',
-        'numeroStudenti': 15,
-    },
-    {
-        'nome': 'Classe#4',
-        'numeroStudenti': 9,
-    },
+/* 
+ * Crea 10 oggetti che rappresentano una zucchina, 
+ * indicandone per ognuno varietà, peso e lunghezza. 
+ * Calcola quanto pesano tutte le zucchine.
+ */
+
+const zucchine = [
+    { varieta: 'Varietà 1', peso: 10, lunghezza: 4 },
+    { varieta: 'Varietà 2', peso: 13, lunghezza: 16 },
+    { varieta: 'Varietà 3', peso: 4, lunghezza: 23 },
+    { varieta: 'Varietà 4', peso: 11, lunghezza: 6 },
+    { varieta: 'Varietà 5', peso: 2, lunghezza: 17 },
+    { varieta: 'Varietà 6', peso: 5, lunghezza: 10 },
+    { varieta: 'Varietà 7', peso: 7, lunghezza: 9 },
+    { varieta: 'Varietà 8', peso: 3, lunghezza: 8 },
+    { varieta: 'Varietà 9', peso: 6, lunghezza: 27 },
+    { varieta: 'Varietà 10', peso: 14, lunghezza: 4 }
 ];
 
-// console.log(classi[1].nome, classi[1].numeroStudenti);
+let sommaZucchine = 0;
 
-// console.table(classi);
-
-// creo un nuovo oggetto classe
-const nuovaClasse = {
-    'nome': 'Classe#5',
-    'numeroStudenti': 19,
+for (let i = 0; i < zucchine.length; i++) {
+    sommaZucchine += zucchine[i].peso;
 }
 
-// lo aggiungo alla lista delle classi
-classi.push(nuovaClasse);
-
-// console.table(classi);
-
-
-
-
-// tiriamo fuori tutto quello che c'è nella lista
-for (let i = 0; i < classi.length; i++) {
-
-    // elemento iesimo dell'array
-    let classeIesima = classi[i];
-
-    // console.log(classeIesima);
-
-    // estrapolo la prop nome dell'oggeto iesimo
-    // let nomeClassse = classeIesima.nome;
-
-    // console.log(nomeClassse);
-
-    // cilco all'interno dell'oggetto iesimo
-    for (let chiaveClasse in classeIesima) {
-        const mess = `Il valore di ${chiaveClasse} è ${classeIesima[chiaveClasse]}`
-        console.log(mess);
-
-    }
-
-}
-
+console.log(sommaZucchine);
