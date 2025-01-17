@@ -1,25 +1,18 @@
-// DESTRUTTURAZIONE OGGETTO
-let name;
+//Spred rest ARRAY
+
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
 
 
+const copyArr = [...array1];
 
-const student = {
-    name: 'Paolo',
-    age: 30,
-    email: 'paolo@email.it'
-};
+const arrTot = [...array1, ...array2];
 
+const copyArr2 = [];
+for (let i = 0; i < array1.length; i++) {
+    copyArr2.push(array1[i]);
+}
 
-//    descruturing
-const { name: nameStudente, email } = student;
-
-// versione estesa
-const nameStudentename = student.name;
-const email = student.email;
-
-
-
-
-console.log(nameStudente, email);
+console.log(copyArr, arrTot);
 
 
