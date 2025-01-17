@@ -1,56 +1,129 @@
-/* regole di debug macro */
-
-[class^='container'] {
-    border: 1px dashed black;
-    background-color: lightblue;
-    /* min-height: 80vh; */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-[class^='row'] {
-    border: 1px dashed red;
+body {
+    color: #67615a;
+    background-color: #f5f5f1;
+
+    font-family: 'Catamaran', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
 }
 
-[class^='col'] {
-    min-height: 100px;
-    background-color: #f1d2e7;
-    border: 1px solid #d0a8eb;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* regole navbar */
-header .nav-link {
-    color: red;
+section {
+    padding: 50px 0;
 }
 
-header .nav-link:hover {
-    color: green;
+.section-title {
+    margin: 20px 0;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #333;
+
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.6;
 }
 
-.titolo {
-    color: red;
+.section-description {
+    max-width: 600px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    line-height: 1.8;
 }
 
-.male {
-    color: red;
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.female {
-    color: violet;
+.team-card {
+    flex-basis: 370px;
+
+    margin-top: 50px;
+    margin-right: 28px;
 }
 
+.team-container::after {
+    flex: auto;
 
-#bottone {
-    width: 100px;
-    height: 100px;
-    background-color: blueviolet;
-    color: black;
-    font-size: 30px;
+    content: '';
+}
+
+.card-image {
+    overflow: hidden;
+
     cursor: pointer;
 }
 
-.saluto-bg1 {
-    background-color: aqua;
+.card-image img {
+    display: block;
+
+    max-width: 100%;
+
+    transition: all 1s;
 }
 
-.saluto-bg2 {
-    background-color: burlywood;
+.card-image:hover img {
+    transform: scale(1.1, 1.1);
+
+    opacity: 0.9;
+}
+
+.card-text {
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #fff;
+}
+
+.card-text h3 {
+    font-family: 'Vidaloka', serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.form-container {
+    max-width: 480px;
+    margin: auto;
+}
+
+label {
+    margin-bottom: 0.25em;
+}
+
+input,
+select,
+button {
+    display: block;
+
+    width: 100%;
+    height: 2.65em;
+    margin-bottom: 1em;
+    padding: 0.25em 1em;
+
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+button {
+    width: 50%;
+    margin-top: 2em;
+
+    font-size: 1rem;
 }
