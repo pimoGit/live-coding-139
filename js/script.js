@@ -48,29 +48,11 @@ for (let i = 0; i < teamMembers.length; i++) {
     // let role = menbroIesimo.role;
     // let image = menbroIesimo.image;
 
-    // const { name, role, image } = menbroIesimo;
+    const { name, role, image } = menbroIesimo;
 
     // console.log(name, role, image);
 
-    items += generaTeamMember(menbroIesimo);
-
-    console.log(items);
-
-}
-
-// ouput
-listTeam.innerHTML = items;
-
-
-
-// FUNZIONI
-
-function generaTeamMember(oggetto) {
-
-    // destrutturazione dell'oggetto
-    const { name, role, image } = oggetto;
-
-    let item = `    
+    items += `    
     <div class="team-card">
         <div class="card-image">
             <img src="img/${image}" alt="${name}" />
@@ -82,7 +64,12 @@ function generaTeamMember(oggetto) {
     </div>
     `
 
-    return item
-
+    console.log(items);
 
 }
+
+// ouput
+listTeam.innerHTML = items;
+
+
+
