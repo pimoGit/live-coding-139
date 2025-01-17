@@ -1,18 +1,9 @@
-//Spred rest ARRAY
+//DESTRUCTURING ARRAY
+const arrayNUm = [2, 3, 7, 6, 5];
 
-const array1 = [1, 2, 3];
-const array2 = [4, 5, 6];
+const [item0, , , item3] = arrayNUm;
 
+console.log(item0, item3);
 
-const copyArr = [...array1];
-
-const arrTot = [...array1, ...array2];
-
-const copyArr2 = [];
-for (let i = 0; i < array1.length; i++) {
-    copyArr2.push(array1[i]);
-}
-
-console.log(copyArr, arrTot);
 
 
