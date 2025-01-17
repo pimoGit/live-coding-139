@@ -1,26 +1,62 @@
-/* 
- * Crea 10 oggetti che rappresentano una zucchina, 
- * indicandone per ognuno varietà, peso e lunghezza. 
- * Calcola quanto pesano tutte le zucchine.
- */
+// DESTRUTTURAZIONE OGGETTO
 
-const zucchine = [
-    { varieta: 'Varietà 1', peso: 10, lunghezza: 4 },
-    { varieta: 'Varietà 2', peso: 13, lunghezza: 16 },
-    { varieta: 'Varietà 3', peso: 4, lunghezza: 23 },
-    { varieta: 'Varietà 4', peso: 11, lunghezza: 6 },
-    { varieta: 'Varietà 5', peso: 2, lunghezza: 17 },
-    { varieta: 'Varietà 6', peso: 5, lunghezza: 10 },
-    { varieta: 'Varietà 7', peso: 7, lunghezza: 9 },
-    { varieta: 'Varietà 8', peso: 3, lunghezza: 8 },
-    { varieta: 'Varietà 9', peso: 6, lunghezza: 27 },
-    { varieta: 'Varietà 10', peso: 14, lunghezza: 4 }
-];
+const student = {
+    name: 'Paolo',
+    age: 30,
+    email: 'paolo@email.it'
+};
 
-let sommaZucchine = 0;
 
-for (let i = 0; i < zucchine.length; i++) {
-    sommaZucchine += zucchine[i].peso;
+//    descruturing
+const { name, email } = student;
+
+// versione estesa
+// const name = student.name;
+// const email = student.email;
+
+
+
+
+console.log(name, email);
+
+
+// REST-SPREAD
+
+// su funzione
+function myFunction(...myArguments) {
+    console.log(myArguments);
+}
+myFunction('uno', 3, { name: 'pippo' });
+//avremo un array composto da tre elementi
+
+function sommaNumeri(...numeri) {
+    let somma = 0;
+    for (let i = 0; i < numeri.length; i++) {
+        somma += numeri[i];
+    }
+    return somma;
 }
 
-console.log(sommaZucchine);
+console.log(sommaNumeri(3, 5, 2));
+
+
+// su oggetti
+const obj = { name: 'palla', peso: 50 };
+
+// copia il ref all'obj
+const copyObj3 = obj;
+
+// versione compatta
+const copyObj = { ...obj, colore: 'blue' };
+
+
+//  versione estesa
+const copyObj2 = {
+    name: obj.name,
+    peso: obj.peso,
+    colore: 'blue'
+};
+
+
+console.log(copyObj);
+//{name: "palla", peso: 50, colore: "blue"}
