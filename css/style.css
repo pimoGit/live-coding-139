@@ -1,129 +1,74 @@
+/* CSS Reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    color: #67615a;
-    background-color: #f5f5f1;
-
-    font-family: 'Catamaran', sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-}
-
+/* Utilities */
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-section {
-    padding: 50px 0;
+/* # Carousel */
+
+#carousel {
+    height: 400px;
+    width: 700px;
+    margin: 30px auto;
+    position: relative;
 }
 
-.section-title {
-    margin: 20px 0;
-
-    text-align: center;
-    text-transform: uppercase;
-
-    color: #333;
-
-    font-size: 21px;
-    font-weight: 600;
-    line-height: 1.6;
+.gallery {
+    height: 100%;
 }
 
-.section-description {
-    max-width: 600px;
-    margin: 0 auto;
-
-    text-align: center;
-
-    line-height: 1.8;
+.gallery figure {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
 }
 
-.team-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.gallery figure.active {
+    display: block;
 }
 
-.team-card {
-    flex-basis: 370px;
-
-    margin-top: 50px;
-    margin-right: 28px;
+.gallery img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-.team-container::after {
-    flex: auto;
-
-    content: '';
+.gallery figcaption {
+    position: absolute;
+    text-align: right;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    color: white;
+    text-shadow: 0 0 5px black;
 }
 
-.card-image {
-    overflow: hidden;
+.gallery figcaption h3 {
+    font-size: 1rem;
+}
 
+/* bottoni di navigazione */
+#carousel .fa-solid {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
 }
 
-.card-image img {
-    display: block;
-
-    max-width: 100%;
-
-    transition: all 1s;
+#prev {
+    left: -10%;
 }
 
-.card-image:hover img {
-    transform: scale(1.1, 1.1);
-
-    opacity: 0.9;
-}
-
-.card-text {
-    padding: 20px;
-
-    text-align: center;
-
-    background-color: #fff;
-}
-
-.card-text h3 {
-    font-family: 'Vidaloka', serif;
-    font-size: 22px;
-    font-weight: 400;
-}
-
-.form-container {
-    max-width: 480px;
-    margin: auto;
-}
-
-label {
-    margin-bottom: 0.25em;
-}
-
-input,
-select,
-button {
-    display: block;
-
-    width: 100%;
-    height: 2.65em;
-    margin-bottom: 1em;
-    padding: 0.25em 1em;
-
-    border: 1px solid #cecece;
-    border-radius: 4px;
-    box-shadow: none;
-}
-
-button {
-    width: 50%;
-    margin-top: 2em;
-
-    font-size: 1rem;
+#next {
+    right: -10%;
 }
