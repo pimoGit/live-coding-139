@@ -27,12 +27,16 @@ const pics = [
 // selezione elemento gallery di output slides
 const containerGallery = document.querySelector('.gallery');
 console.log(containerGallery);
+//  selezione elemnto thumbnalis di output
+const containerThumbs = document.getElementById('thumbnails');
 
 
 // generiamo dinamicamente il blocco dei vari elementi di slide
 
 // variabile di accumulo dell'elento di output (stringa)
 let galleryElements = '';
+// variabile acculumo thumbs
+let thumbElements = '';
 
 // ciclo su array e incremento di galleryElement con gli elementi di output
 for (let i = 0; i < pics.length; i++) {
@@ -54,10 +58,17 @@ for (let i = 0; i < pics.length; i++) {
     `;
     // console.log(galleryElements);
 
+    // aggiungo ad ogni iterazione una nuova thumb
+    thumbElements += `
+        <img alt="${title}" src="${image}">
+    `;
+
 }
 
 // inserisco le slide dentro gallery
 containerGallery.innerHTML = galleryElements;
+// inserisco le thumbs dentro contenitore relativo
+containerThumbs.innerHTML = thumbElements;
 
 
 // gestione iniziale dell'indice della slide attiva (gestione active)
@@ -128,3 +139,30 @@ prevButton.addEventListener('click', () => {
 
 }
 );
+
+
+//  gestione navigazione dalle thumbs
+
+for (let i = 0; i < thumbs.length; i++) {
+
+    let currentThumbnail = thumbs[i];
+
+    console.log(currentThumbnail);
+
+    currentThumbnail.addEventListener('click', () => {
+        // rimuovo l'active dalla slide corrente
+        slides[currentIndex].classList.remove('active');
+        // rimuovo l'active dalla thumb corrente
+        thumbs[currentIndex].classList.remove('active');
+
+        // setto il valore di currentIndex
+        currentIndex = i;
+
+        // aggiungo l'active alla slide nuova
+        slides[currentIndex].classList.add('active');
+        // aggiungo l'active alla thumb nuova
+        thumbs[currentIndex].classList.add('active');
+
+    });
+
+}
