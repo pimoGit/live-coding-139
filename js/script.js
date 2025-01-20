@@ -63,11 +63,17 @@ containerGallery.innerHTML = galleryElements;
 // gestione iniziale dell'indice della slide attiva (gestione active)
 // seleziono tutte le slide
 const slides = document.querySelectorAll('.gallery figure');
-console.log(slides);
+// console.log(slides);
+// seleziono le thumbs
+const thumbs = document.querySelectorAll('#thumbnails img');
+console.log(thumbs);
+
 // variabile di gestione dell'indice per l'active
 let currentIndex = 0;
-// aggiungo la classe active al primo elemento
+// aggiungo la classe active al prima slide
 slides[currentIndex].classList.add('active');
+// aggiungo la calsse active alla prima thumb
+thumbs[currentIndex].classList.add('active');
 
 
 
@@ -82,6 +88,9 @@ console.log(prevButton, nextButton);
 nextButton.addEventListener('click', () => {
     // rimuovo l'active dalla slide corrente
     slides[currentIndex].classList.remove('active');
+    // rimuovo l'active dalla thumb corrente
+    thumbs[currentIndex].classList.remove('active');
+
 
     if (currentIndex < slides.length - 1) {
         // aggiorno il valore dell'indice corrente
@@ -92,6 +101,8 @@ nextButton.addEventListener('click', () => {
 
     // aggiungo l'active alla slide nuova
     slides[currentIndex].classList.add('active');
+    // aggiungo l'active alla thumb nuova
+    thumbs[currentIndex].classList.add('active');
 
 }
 );
@@ -100,6 +111,8 @@ nextButton.addEventListener('click', () => {
 prevButton.addEventListener('click', () => {
     // rimuovo l'active dalla slide corrente
     slides[currentIndex].classList.remove('active');
+    // rimuovo l'active dalla thumb corrente
+    thumbs[currentIndex].classList.remove('active');
 
     if (currentIndex > 0) {
         // aggiorno il valore dell'indice corrente
@@ -110,6 +123,8 @@ prevButton.addEventListener('click', () => {
 
     // aggiungo l'active alla slide nuova
     slides[currentIndex].classList.add('active');
+    // aggiungo l'active alla thumb nuova
+    thumbs[currentIndex].classList.add('active');
 
 }
 );
