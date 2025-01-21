@@ -1,49 +1,39 @@
 const numeri = [1, 2, 3, 4, 5];
 
-// filtraggio con filter (array nuovo con soli numeri pari)
-const pari = numeri.filter((numero) => {
-    if (numero % 2 === 0) {
-        return true;
-    }
-    return false;
+// ricerca di un elemento pari
+const primoNumeroPari = numeri.find((numero) => {
+    return numero % 2 === 0;
 });
+
 
 
 
 // versione for tradizionale
-// const pari = [];
+// let primoNumeroPari;
 
-// for (let i = 0; i < numeri.length; i++) {
+// for (let i = 0; i < numeri.length && primoNumeroPari === undefined; i++) {
 //     let numero = numeri[i];
-
 //     if (numero % 2 === 0) {
-//         pari.push(numero);
+//         primoNumeroPari = numero;
 //     }
 // }
 
-console.log(pari); // [2, 4]
+
+console.log(primoNumeroPari); // 2
 
 
-
-// 
-const students = [
-    { id: 1, name: 'Marco', year: 1 },
-    { id: 2, name: 'Silvia', year: 2 },
-    { id: 3, name: 'Ginevra', year: 1 },
-    { id: 4, name: 'Sandro', year: 3 },
+//  es. di ricerca specifica su array di oggetti
+const people = [
+    { id: 4, name: 'Paolo', age: 32 },
+    { id: 3, name: 'Clelia', age: 34 },
 ];
 
-// otteniamo una lista dei soli studenti che sono al primo anno
-const primoAnno = students.filter((student) => {
-    // if (student.year === 1) {
-    //     return true
-    // } else {
-    //     return false
-    // }
-
-    return student.year === 1;
+// trova la person con id 3
+const myPerson = people.find((person) => {
+    return person.id === 3;
 });
 
-// const primoAnno = students.filter(student => student.year === 1);
+//RISULTATO: { id: 3, name: 'Clelia', age: 34 }
 
-console.log(primoAnno);
+console.log(myPerson, myPerson.name, myPerson.age);
+
