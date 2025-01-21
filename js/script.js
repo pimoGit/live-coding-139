@@ -1,65 +1,62 @@
-const students = [
+const cars = [
     {
-        id: 1,
-        name: 'Luca Bianchi',
-        age: 32,
-        class: '3C',
-        vote: 9
+        marca: 'Alfa Romeo',
+        modello: 'Giulietta',
+        alimentazione: 'benzina',
     },
     {
-        id: 2,
-        name: 'Andrea Rossi',
-        age: 18,
-        class: '4A',
-        vote: 7
+        marca: 'FIAT',
+        modello: 'Doblò',
+        alimentazione: 'diesel',
     },
     {
-        id: 3,
-        name: 'Giovanni Verdi',
-        age: 33,
-        class: '5B',
-        vote: 7
+        marca: 'Tesla',
+        modello: 'robot',
+        alimentazione: 'elettrico',
     },
     {
-        id: 4,
-        name: 'Francesco Esposito',
-        age: 25,
-        class: '5B',
-        vote: 7
+        marca: 'FIAT',
+        modello: 'Panda',
+        alimentazione: 'benzina',
     },
     {
-        id: 5,
-        name: 'Matteo Ferri',
-        age: 57,
-        class: '5B',
-        vote: 10
+        marca: 'FIAT',
+        modello: 'Fiorino',
+        alimentazione: 'metano',
+    },
+    {
+        marca: 'Ford',
+        modello: 'Fiesta',
+        alimentazione: 'diesel',
+    },
+    {
+        marca: 'Ford',
+        modello: 'Ka',
+        alimentazione: 'gpl',
+    },
+    {
+        marca: 'Smart',
+        modello: 'Smart',
+        alimentazione: 'elettrico',
+    },
+    {
+        marca: 'VW',
+        modello: 'California',
+        alimentazione: 'diesel',
+    },
+    {
+        marca: 'Reanult',
+        modello: 'Twingo',
+        alimentazione: 'gpl',
     },
 ];
 
-// Stampa in console i nomi di tutti gli studenti
-students.forEach((student) => {
-    console.log(student.name);
-});
+const benzinaCars = cars.filter(car => car.alimentazione === 'benzina');
+const dieselCars = cars.filter(car => car.alimentazione === 'diesel');
+const otherCars = cars.filter(car => car.alimentazione !== 'benzina' && car.alimentazione !== 'diesel');
 
-// Crea un array con la lista  di tutti i nomi degli studenti
-const nomi = students.map((student) => {
-    return student.name;
-});
-
-console.log(nomi);
+console.log(benzinaCars);
+console.log(dieselCars);
+console.log(otherCars);
 
 
-// Crea un array che contenga solo gli studenti dai 30 anni in più
-const over30 = students.filter((student) => {
-    return student.age >= 30;
-});
-
-console.log(over30);
-
-
-// Trova lo studente con id 4
-const studente4 = students.find((student) => {
-    return student.id === 4;
-});
-
-console.log(studente4);
