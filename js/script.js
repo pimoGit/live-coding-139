@@ -1,43 +1,49 @@
 const numeri = [1, 2, 3, 4, 5];
 
-// versione Map
-const quadrati = numeri.map((numero) => {
-    return numero * numero;
+// filtraggio con filter (array nuovo con soli numeri pari)
+const pari = numeri.filter((numero) => {
+    if (numero % 2 === 0) {
+        return true;
+    }
+    return false;
 });
 
 
-// versione For
-// const quadrati = [];
+
+// versione for tradizionale
+// const pari = [];
+
 // for (let i = 0; i < numeri.length; i++) {
 //     let numero = numeri[i];
-//     let prodotto = numero * numero;
-//     quadrati.push(prodotto);
+
+//     if (numero % 2 === 0) {
+//         pari.push(numero);
+//     }
 // }
 
-
-// console.log(numeri, quadrati); // [1, 4, 9, 16, 25]
-
+console.log(pari); // [2, 4]
 
 
-//  altro esempio con array di oggetti
+
+// 
 const students = [
-    { firstName: 'Mario', lastName: 'Rossi' },
-    { firstName: 'Luigi', lastName: 'Verdi' },
-    { firstName: 'Margherita', lastName: 'Bianchi' }
+    { id: 1, name: 'Marco', year: 1 },
+    { id: 2, name: 'Silvia', year: 2 },
+    { id: 3, name: 'Ginevra', year: 1 },
+    { id: 4, name: 'Sandro', year: 3 },
 ];
 
-const arrayNomi = students.map((student) => {
-    // console.log(student);
-    return `${student.lastName} ${student.firstName}`
+// otteniamo una lista dei soli studenti che sono al primo anno
+const primoAnno = students.filter((student) => {
+    // if (student.year === 1) {
+    //     return true
+    // } else {
+    //     return false
+    // }
+
+    return student.year === 1;
 });
 
+// const primoAnno = students.filter(student => student.year === 1);
 
-
-// versione foreach
-// const arrayNomi = [];
-// students.forEach((student) => {
-//     arrayNomi.push(`${student.lastName} ${student.firstName}`);
-// });
-
-
-console.log(arrayNomi);
+console.log(primoAnno);
