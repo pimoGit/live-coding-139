@@ -29,7 +29,15 @@ const students = [
 const arrayNomi = students.map((student) => {
     // console.log(student);
     return `${student.lastName} ${student.firstName}`
-
 });
+
+
+
+// versione foreach
+// const arrayNomi = [];
+// students.forEach((student) => {
+//     arrayNomi.push(`${student.lastName} ${student.firstName}`);
+// });
+
 
 console.log(arrayNomi);
