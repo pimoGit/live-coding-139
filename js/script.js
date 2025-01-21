@@ -1,26 +1,35 @@
-const students = ['Paolo', 'Giulia', 'Marco'];
+const numeri = [1, 2, 3, 4, 5];
 
-students.forEach((element) => {
-    console.log(element);
+// versione Map
+const quadrati = numeri.map((numero) => {
+    return numero * numero;
 });
 
 
-// versione for
-// for (let i = 0; i < students.length; i++) {
-//     let element = students[i];
-//     console.log(element);
+// versione For
+// const quadrati = [];
+// for (let i = 0; i < numeri.length; i++) {
+//     let numero = numeri[i];
+//     let prodotto = numero * numero;
+//     quadrati.push(prodotto);
 // }
 
 
-const cats = [
-    { name: 'Jerry', color: 'Gray' },
-    { name: 'Felix', color: 'Black and White' },
-    { name: 'Garfield', color: 'Orange' },
+// console.log(numeri, quadrati); // [1, 4, 9, 16, 25]
+
+
+
+//  altro esempio con array di oggetti
+const students = [
+    { firstName: 'Mario', lastName: 'Rossi' },
+    { firstName: 'Luigi', lastName: 'Verdi' },
+    { firstName: 'Margherita', lastName: 'Bianchi' }
 ];
 
-cats.forEach((cat, posizione) => {
-    console.log(`
-      ${cat.name}'s color is ${cat.color} and the position is ${posizione}
-    `);
+const arrayNomi = students.map((student) => {
+    // console.log(student);
+    return `${student.lastName} ${student.firstName}`
+
 });
 
+console.log(arrayNomi);
