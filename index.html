@@ -14,6 +14,10 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
+    <!-- BS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css'
+        integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=='
+        crossorigin='anonymous' />
     <!-- inclusione Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"></script>
     <!-- Style -->
@@ -21,9 +25,10 @@
 </head>
 
 <body>
-    <p>
-        Il numero estratto dalla API è <span id="outputNum"></span>
-    </p>
+    <h1>Gioco dei dadi</h1>
+    <p>Numero Giocatore 1: <strong id="p1"></strong></p>
+    <p>Numero Giocatore 2: <strong id="p2"></strong></p>
+    <p id="result"></p>
     <script src="js/script.js"></script>
 </body>
 
