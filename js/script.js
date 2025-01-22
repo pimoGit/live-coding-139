@@ -1,62 +1,25 @@
-const cars = [
-    {
-        marca: 'Alfa Romeo',
-        modello: 'Giulietta',
-        alimentazione: 'benzina',
-    },
-    {
-        marca: 'FIAT',
-        modello: 'Doblò',
-        alimentazione: 'diesel',
-    },
-    {
-        marca: 'Tesla',
-        modello: 'robot',
-        alimentazione: 'elettrico',
-    },
-    {
-        marca: 'FIAT',
-        modello: 'Panda',
-        alimentazione: 'benzina',
-    },
-    {
-        marca: 'FIAT',
-        modello: 'Fiorino',
-        alimentazione: 'metano',
-    },
-    {
-        marca: 'Ford',
-        modello: 'Fiesta',
-        alimentazione: 'diesel',
-    },
-    {
-        marca: 'Ford',
-        modello: 'Ka',
-        alimentazione: 'gpl',
-    },
-    {
-        marca: 'Smart',
-        modello: 'Smart',
-        alimentazione: 'elettrico',
-    },
-    {
-        marca: 'VW',
-        modello: 'California',
-        alimentazione: 'diesel',
-    },
-    {
-        marca: 'Reanult',
-        modello: 'Twingo',
-        alimentazione: 'gpl',
-    },
-];
+// const numero = 7;
+// selezioniamo l'elemnto di output
+const outputEl = document.getElementById('outputNum');
+// console.log(outputEl);
 
-const benzinaCars = cars.filter(car => car.alimentazione === 'benzina');
-const dieselCars = cars.filter(car => car.alimentazione === 'diesel');
-const otherCars = cars.filter(car => car.alimentazione !== 'benzina' && car.alimentazione !== 'diesel');
+const endpoint = 'https://flynn.boolean.careers/exercises/api/random/int';
 
-console.log(benzinaCars);
-console.log(dieselCars);
-console.log(otherCars);
+// faccio partire la richiesta Ajax verso l'API per ricevere il numero
+axios.get(endpoint)
+    .then(responseObj => {
+        //codice da eseguire in caso di successo
+        const result = responseObj.data;
+        let numero = result.response
+        console.log(numero);
+
+        // output in pagina
+        outputEl.innerText = numero;
+
+    })
+    .catch(error => {
+        // codice da eseguire in caso di errore
+        console.error(error)
+    })
 
 
