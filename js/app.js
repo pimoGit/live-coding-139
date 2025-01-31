@@ -14,6 +14,7 @@ console.log("Hey sono in Node!!");
 // dell'oggetto tramite destructuring 
 const { sum, user } = require("./modulotest.js");
 
+// versione ESM
 // import { sum, user } from "./modulotest.js"
 
 
