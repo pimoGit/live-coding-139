@@ -14,5 +14,8 @@ console.log("Hey sono in Node!!");
 // dell'oggetto tramite destructuring 
 const { sum, user } = require("./modulotest.js");
 
+// import { sum, user } from "./modulotest.js"
+
+
 sum()
 console.log(user.name);

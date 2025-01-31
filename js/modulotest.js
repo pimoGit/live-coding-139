@@ -20,3 +20,9 @@ module.exports = {
     sum,
     user
 };
+
+// versione ESM
+// export {
+//     sum,
+//     user
+// };
