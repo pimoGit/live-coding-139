@@ -1,22 +1,6 @@
-console.log("Hey sono in Node!!");
+const { somma, sottrai, moltiplica, dividi } = require("./modulotest");
 
-
-
-// importiamo tutto l'oggetto esportato salvandolo in una variabile
-// const myContent = require("./modulotest.js");
-
-// myContent.sum();
-// console.log(myContent.user.name);
-
-
-
-// importiamo singolarmente le proprietà
-// dell'oggetto tramite destructuring 
-const { sum, user } = require("./modulotest.js");
-
-// versione ESM
-// import { sum, user } from "./modulotest.js"
-
-
-sum()
-console.log(user.name);
+console.log(somma(1, 2));
+console.log(sottrai(6, 3));
+console.log(moltiplica(2, 2));
+console.log(dividi(5, 2));

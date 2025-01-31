@@ -1,28 +1,24 @@
-const user = {
-    name: 'John',
-    age: 30,
+// file one
+function sum(num1, num2) {
+    return num1 + num2;
 }
 
-function sum() {
-    // code
-    console.log("Da grande sommerò due numeri!");
-
+function subtract(num1, num2) {
+    return num1 - num2;
 }
 
+function multiply(num1, num2) {
+    return num1 * num2;
+}
 
+function divide(num1, num2) {
+    return num1 / num2;
+}
 
-// esportiamo solo la funzione sum
-// module.exports = sum;
-
-// esportiamo sia la funzione 
-// sum che l'oggetto contenuto in user
+// esporto i moduli
 module.exports = {
-    sum,
-    user
+    somma: sum,
+    sottrai: subtract,
+    moltiplica: multiply,
+    dividi: divide
 };
-
-// versione ESM
-// export {
-//     sum,
-//     user
-// };
